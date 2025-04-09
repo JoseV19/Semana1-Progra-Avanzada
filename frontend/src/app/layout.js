@@ -1,14 +1,13 @@
-import { Inter, Mono } from "next/font/google"; // Inter es una fuente válida, por ejemplo
+import { Roboto, Inter } from "next/font/google";
 import "./globals.css";
 
-// Usa una fuente válida
-const interFont = Inter({
-  variable: "--font-inter",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
-const monoFont = Mono({
-  variable: "--font-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -20,11 +19,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${interFont.variable} ${monoFont.variable} antialiased`}>
+      <body className={`${roboto.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
   );
 }
-
 
